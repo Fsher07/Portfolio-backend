@@ -19,6 +19,31 @@ mongoose
 app.use(express.json());
 
 //Avoid CORS error
+
+app.use(function (req, res, next) {
+  // Website to connect
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    'https://salim-portfolio.vercel.app/'
+  );
+
+  // Request methods
+  res.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+  );
+
+  // Request headers
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-Requested-With,content-type'
+  );
+
+  res.setHeader('Access-Control-Allow-Credentials', true);
+
+  // Pass to next layer of middleware
+  next();
+});
 const corsOpts = {
   origin: '*',
 
