@@ -25,9 +25,9 @@ app.use('/api', skillRoute);
 app.use('/api', projectRoute);
 
 app.listen(PORT, () => {
-  console.log('Server is running on port 4000');
+  console.log('Server is running on port 5000');
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  res.send('Port 5000 is working');
 });
