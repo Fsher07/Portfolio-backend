@@ -17,7 +17,17 @@ mongoose
 
 //Middleware
 app.use(express.json());
-app.use(cors());
+
+//Avoid CORS error
+const corsOpts = {
+  origin: '*',
+
+  methods: ['GET', 'POST'],
+
+  allowedHeaders: ['Content-Type'],
+};
+
+app.use(cors(corsOpts));
 
 //Routes
 app.use('/api', experienceRoute);
