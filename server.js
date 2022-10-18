@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
   // Website to connect
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://salim-portfolio.vercel.app/'
+    'https://salim-portfolio.vercel.app/projects'
   );
 
   // Request methods
