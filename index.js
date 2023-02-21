@@ -19,8 +19,11 @@ mongoose
 app.use(express.json());
 
 //Avoid CORS error
-
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 
 //Routes
 app.use("/api", experienceRoute);
