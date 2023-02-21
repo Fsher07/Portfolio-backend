@@ -21,9 +21,19 @@ app.use(express.json());
 //Avoid CORS error
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "*",
   })
 );
+
+//set Access-Control-Allow-Origin manually
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 //Routes
 app.use("/api", experienceRoute);
