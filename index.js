@@ -21,7 +21,7 @@ app.use(express.json());
 //Avoid CORS error
 
 const corsOpts = {
-  origin: "https://salim-portfolio.vercel.app/",
+  origin: "https://salim-portfolio.vercel.app",
 
   optionsSuccessStatus: 200,
 };
