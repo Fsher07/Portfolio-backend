@@ -20,25 +20,7 @@ app.use(express.json());
 
 //Avoid CORS error
 
-const corsOpts = {
-  origin: "https://salim-portfolio.vercel.app",
-
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOpts));
-
-app.use(function (req, res, next) {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://salim-portfolio.vercel.app"
-  ); // update to match the domain you will make the request from
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+app.use(cors());
 
 //Routes
 app.use("/api", experienceRoute);
