@@ -31,7 +31,7 @@ app.use(cors(corsOpts));
 app.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://salim-portfolio.vercel.app/"
+    "https://salim-portfolio.vercel.app"
   ); // update to match the domain you will make the request from
   res.header(
     "Access-Control-Allow-Headers",
