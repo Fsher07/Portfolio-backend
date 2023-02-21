@@ -21,11 +21,9 @@ app.use(express.json());
 //Avoid CORS error
 
 const corsOpts = {
-  origin: "*",
+  origin: "https://salim-portfolio.vercel.app/",
 
-  methods: ["GET", "POST"],
-
-  allowedHeaders: ["Content-Type"],
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOpts));
